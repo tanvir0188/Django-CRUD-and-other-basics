@@ -1,0 +1,29 @@
+{% extends 'common_code/base.html' %}
+
+
+{% block title %}
+  Machine learning
+{% endblock title %}
+  
+
+{% block Page_name %} {{Page_name}} 
+{%endblock Page_name %}
+
+
+{% block content %}
+<p>
+  class:  {{c_name}}<br />
+  name: {% if not is_lower %} {{ name }} {% else %} {{ name|upper }} {% endif %}
+</p>
+
+
+    
+
+
+<p>
+  Teacher has {{number_of_students}} students. They are {% for stud in teachers %} {{forloop.counter}}.{{stud}} {% endfor %}
+  {% endblock content %}
+</p>
+
+    
+    
